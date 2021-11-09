@@ -1,0 +1,22 @@
+@import "vars";
+#main {
+  #mainVisual {
+    ul {
+      li {
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        &.visual01 {
+          background-image: url("../images/main/mainVisual01.jpg");
+        }
+        &.visual02 {
+          background-image: url("../images/main/mainVisual02.jpg");
+        }
+        &.visual03 {
+          background-image: url("../images/main/mainVisual03.jpg");
+        }
+      }
+    }
+  }
+}

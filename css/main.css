@@ -1,0 +1,7 @@
+#main #mainVisual ul li { height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: 50%; }
+
+#main #mainVisual ul li.visual01 { background-image: url("../images/main/mainVisual01.jpg"); }
+
+#main #mainVisual ul li.visual02 { background-image: url("../images/main/mainVisual02.jpg"); }
+
+#main #mainVisual ul li.visual03 { background-image: url("../images/main/mainVisual03.jpg"); }
