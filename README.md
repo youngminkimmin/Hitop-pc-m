@@ -30,3 +30,6 @@ const mainVisualSlider = new Swiper("#mainVisual", {
 글을씁니다.  
 글을씁니다.  
 글을씁니다.
+
+**_글자가 두껍게 됩니다._**  
+~~취소선 나타내기~~
