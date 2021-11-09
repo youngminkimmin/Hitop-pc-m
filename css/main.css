@@ -1,3 +1,5 @@
+#main #mainVisual { overflow: hidden; position: relative; }
+
 #main #mainVisual ul li { height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: 50%; }
 
 #main #mainVisual ul li.visual01 { background-image: url("../images/main/mainVisual01.jpg"); }
@@ -5,3 +7,15 @@
 #main #mainVisual ul li.visual02 { background-image: url("../images/main/mainVisual02.jpg"); }
 
 #main #mainVisual ul li.visual03 { background-image: url("../images/main/mainVisual03.jpg"); }
+
+#main #mainVisual .slogan { position: absolute; z-index: 3; top: 50%; left: 50%; text-align: center; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; }
+
+#main #mainVisual .slogan .main { font-size: 5.4rem; font-weight: 600; margin-bottom: 50px; text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
+
+#main #mainVisual .slogan .sub { font-size: 1.8rem; line-height: 1.5; }
+
+#main #mainVisual button { position: absolute; top: 50%; width: 100px; height: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); z-index: 4; color: #fff; cursor: pointer; }
+
+#main #mainVisual button.prev { left: 0; }
+
+#main #mainVisual button.next { right: 0; }

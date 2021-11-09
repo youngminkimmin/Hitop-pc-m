@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/first.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/main.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -85,11 +88,20 @@
     <main id="main">
       <div class="container">
         <div id="mainVisual">
-          <ul>
-            <li class="visual01"></li>
-            <li class="visual02"></li>
-            <li class="visual03"></li>
+          <ul class="swiper-wrapper">
+            <li class="visual01 swiper-slide"></li>
+            <li class="visual02 swiper-slide"></li>
+            <li class="visual03 swiper-slide"></li>
           </ul>
+          <div class="slogan">
+            <p class="main">High Technology TOP Peoples</p>
+            <p class="sub">
+              아름답고 쾌적한 거리, 안전하고 차별화 된 공간을 원하십니까? <br />
+              최고의 기술을 가진 최상의 조직! 자연을 닮은 제품을 제공하는 하이탑입니다.
+            </p>
+          </div>
+          <button class="prev"><span class="material-icons"> arrow_back_ios </span></button>
+          <button class="next"><span class="material-icons">arrow_forward_ios</span></button>
         </div>
       </div>
     </main>
