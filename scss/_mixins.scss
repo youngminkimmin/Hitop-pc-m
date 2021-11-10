@@ -24,17 +24,17 @@
 
   $shadow: "";
   @if ($direction == right) {
-    @for $i from 1 to $num - 1 {
+    @for $i from 1 to $num {
       $shadow: $shadow + $i + "px " + $i + "px 0px " + $bg-color + ",";
     }
     $shadow: $shadow + $num + "px " + $num + "px 0px " + $bg-color + ";";
   } @else {
-    @for $i from 1 to $num - 1 {
+    @for $i from 1 to $num {
       $shadow: $shadow + $i * -1 + "px " + $i + "px 0px " + $bg-color + ",";
     }
     $shadow: $shadow + $num * -1 + "px " + $num + "px 0px " + $bg-color + ";";
   }
-  $shaodw: unquote($shadow);
+  $shadow: unquote($shadow);
   text-shadow: $shadow;
 }
 

@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 html {
   font-size: 10px;
 }
@@ -59,7 +60,7 @@ img {
     }
     #gnb {
       text-align: center;
-      color: #fff;
+      color: $white-color;
       .list {
         display: flex;
         > li {
@@ -85,13 +86,13 @@ img {
       }
     }
     .etc {
-      color: #fff;
+      color: $white-color;
       height: 90px;
       display: flex;
       align-items: center;
       .online {
         padding: 15px 30px;
-        border: 2px solid #fff;
+        border: 2px solid $white-color;
         border-radius: 100px;
         transition: all 0.25s ease;
         &:hover {
@@ -107,7 +108,7 @@ img {
           display: block;
           width: 30px;
           height: 2px;
-          background-color: #fff;
+          background-color: $white-color;
           position: absolute;
           left: 10px;
           transition: all 0.25s ease;
@@ -137,6 +138,64 @@ img {
             }
           }
         }
+      }
+    }
+  }
+}
+// header end
+#footer {
+  background-color: $gray-color;
+  color: $white-color;
+  .utilMenu {
+    // built in function  darken(color,10)
+    // transparentize(color, 0.5)
+    border-bottom: 1px solid transparentize($white-color, 0.5);
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        &:first-child a:before {
+          display: none;
+        }
+        a {
+          display: block;
+          padding: 30px;
+          position: relative;
+          &:before {
+            @include pseudo();
+            @include box(1px, 10px);
+            background-color: $white-color;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  .addressBox {
+    width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    .address {
+      margin-left: 50px;
+      line-height: 1.5;
+      .copyright {
+        margin-top: 30px;
+      }
+    }
+    .tel {
+      position: absolute;
+      right: 0;
+      strong {
+        display: block;
+        font-size: 3.6rem;
+        font-weight: 600;
+        margin-top: 20px;
       }
     }
   }
