@@ -240,9 +240,9 @@ _이탤릭체_
 > 러ㅏ어나ㅣ렁ㄴ
 > ㅓ랑너링ㄴ
 
-![alt 태그에 들어가는 글자](/hitop/images/main/businessField01.jpg)
-![이미지를 대신할 글자 alt](/hitop/images/main/mainLink01.jpg)
-[![이미지를 대신할 글자 alt](/hitop/images/main/mainLink01.jpg)](http://www.daum.net)
+![alt 태그에 들어가는 글자](/images/main/businessField01.jpg)
+![이미지를 대신할 글자 alt](/images/main/mainLink01.jpg)
+[![이미지를 대신할 글자 alt](/images/main/mainLink01.jpg)](http://www.daum.net)
 
 [naver](http://www.naver.com)
 
