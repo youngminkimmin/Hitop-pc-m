@@ -16,4 +16,26 @@
   width: $width;
   height: $height;
 }
+
+@mixin longShadow($bg-color: #000, $direction: right, $num: 100) {
+  //text-shadow:1px 1px 0px rgba(),
+  //2px 2px 0px rgba(),
+  //2px 2px 0px rgba();
+
+  $shadow: "";
+  @if ($direction == right) {
+    @for $i from 1 to $num - 1 {
+      $shadow: $shadow + $i + "px " + $i + "px 0px " + $bg-color + ",";
+    }
+    $shadow: $shadow + $num + "px " + $num + "px 0px " + $bg-color + ";";
+  } @else {
+    @for $i from 1 to $num - 1 {
+      $shadow: $shadow + $i * -1 + "px " + $i + "px 0px " + $bg-color + ",";
+    }
+    $shadow: $shadow + $num * -1 + "px " + $num + "px 0px " + $bg-color + ";";
+  }
+  $shaodw: unquote($shadow);
+  text-shadow: $shadow;
+}
+
 //f(x,y)

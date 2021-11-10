@@ -208,6 +208,12 @@ article {
         li {
           width: 390px;
           border: 1px solid $border-color;
+          transition: all 0.25s ease;
+          &:hover {
+            border-color: $main-color;
+            transform: translateY(-20px);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+          }
           img {
             width: 100%;
             height: 350px;
@@ -228,6 +234,39 @@ article {
             }
           }
         }
+      }
+    }
+  }
+  //news end
+  #customer {
+    background: url("../images/main/bgCustomer.jpg") no-repeat 50%;
+    background-size: cover;
+    color: #fff;
+    .titleBox {
+      h2 {
+        &:after {
+          @include pseudo(block, relative);
+          @include box(30px, 2px);
+          background-color: #fff;
+          margin: 30px auto;
+        }
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
+    .btns {
+      display: flex;
+      justify-content: center;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include box(200px, 60px);
+        color: #fff;
+        background-color: $main-color;
+        border-radius: 100px;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 1), 2px 2px 0px rgba(0, 0, 0, 1), 3px 3px 0px rgba(0, 0, 0, 1);
       }
     }
   }
