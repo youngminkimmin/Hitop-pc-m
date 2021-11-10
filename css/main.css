@@ -1,3 +1,11 @@
+article { padding: 50px 0; }
+
+.contentsBox { padding: 100px 0; }
+
+.titleBox { margin-bottom: 100px; text-align: center; }
+
+.titleBox h2 { font-size: 3.6rem; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; }
+
 #main #mainVisual { overflow: hidden; position: relative; }
 
 #main #mainVisual ul li { height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: 50%; }
@@ -24,17 +32,57 @@
 
 #main #mainVisual .iconScroll .icon { display: -webkit-box; display: -ms-flexbox; display: flex; width: 20px; height: 40px; border: 2px solid #fff; border-radius: 100px; margin-bottom: 10px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#main #mainVisual .iconScroll .icon:before { content: ""; display: block; width: 3px; height: 8px; background-color: #fff; border-radius: 100px; margin-top: 10px; -webkit-animation: iconAni 0.5s ease infinite alternate; animation: iconAni 0.5s ease infinite alternate; }
+#main #mainVisual .iconScroll .icon:before { content: ""; display: block; position: relative; width: 3px; height: 8px; background-color: #fff; border-radius: 100px; margin-top: 10px; -webkit-animation: iconAni 0.5s ease infinite alternate; animation: iconAni 0.5s ease infinite alternate; }
 
 #main #mainVisual .iconScroll .txt { color: #fff; text-transform: uppercase; font-weight: 500; font-size: 1.2rem; }
 
+#main #quickMenu { padding-top: 0; }
+
 #main #quickMenu .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#main #quickMenu .list li { width: 400px; position: relative; }
+#main #quickMenu .list li { width: 400px; position: relative; overflow: hidden; }
+
+#main #quickMenu .list li:hover:before { opacity: 1; }
+
+#main #quickMenu .list li:hover img { -webkit-transform: scale(1.2); transform: scale(1.2); }
+
+#main #quickMenu .list li:before { content: ""; display: block; position: absolute; border: 1px solid #fff; left: 20px; right: 20px; top: 20px; bottom: 20px; opacity: 0; z-index: 2; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+#main #quickMenu .list li img { -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
 
 #main #quickMenu .list li .txtBox { position: absolute; bottom: 40px; left: 40px; color: #fff; }
 
 #main #quickMenu .list li .txtBox h3 { font-size: 3.6rem; font-weight: 600; text-transform: uppercase; margin-top: 20px; }
+
+#main #business { background: url("../images/main/bgBusiness.jpg") no-repeat 50%; background-size: cover; }
+
+#main #business .listBox { width: 1200px; margin: auto; }
+
+#main #business .listBox .list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+#main #business .listBox .list li { width: 590px; position: relative; margin-bottom: 20px; overflow: hidden; }
+
+#main #business .listBox .list li:hover img { -webkit-transform: scale(1.2); transform: scale(1.2); -webkit-filter: grayscale(0); filter: grayscale(0); }
+
+#main #business .listBox .list li img { -webkit-filter: grayscale(100%); filter: grayscale(100%); -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+#main #business .listBox .list li .txtBox { position: absolute; left: 40px; bottom: 40px; color: #fff; }
+
+#main #business .listBox .list li .txtBox h3 { font-size: 2.4rem; margin-bottom: 10px; font-weight: 500; }
+
+#main #news .listBox { width: 1200px; margin: auto; }
+
+#main #news .listBox .list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+#main #news .listBox .list li { width: 390px; border: 1px solid #d9d9d9; }
+
+#main #news .listBox .list li img { width: 100%; height: 350px; -o-object-fit: cover; object-fit: cover; }
+
+#main #news .listBox .list li .txtBox { padding: 20px; }
+
+#main #news .listBox .list li .txtBox h3 { font-size: 2.4rem; margin-bottom: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+#main #news .listBox .list li .txtBox .txt { margin-bottom: 20px; line-height: 1.5; height: 4.5em; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
 
 @-webkit-keyframes iconAni { 0% { -webkit-transform: translateY(0); transform: translateY(0); }
   100% { -webkit-transform: translateY(10px); transform: translateY(10px); } }
