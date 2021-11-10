@@ -1,0 +1,19 @@
+@mixin multiEllipsis($line-height: 1.5, $line: 2) {
+  line-height: $line-height;
+  height: $line-height * $line * 1em; // 높이를 얼마로 지정할건지...
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line; //몇줄 들어갈건지...
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+@mixin pseudo($display: block, $position: absolute) {
+  content: "";
+  display: $display;
+  position: $position;
+}
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+//f(x,y)
