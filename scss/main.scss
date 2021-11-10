@@ -58,5 +58,72 @@
         right: 0;
       }
     }
+    .iconScroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      bottom: 100px;
+      z-index: 2;
+      .icon {
+        display: flex;
+        width: 20px;
+        height: 40px;
+        border: 2px solid #fff;
+        border-radius: 100px;
+        margin-bottom: 10px;
+        justify-content: center;
+        &:before {
+          content: "";
+          display: block;
+          width: 3px;
+          height: 8px;
+          background-color: #fff;
+          border-radius: 100px;
+          margin-top: 10px;
+          animation: iconAni 0.5s ease infinite alternate;
+          //animation: name duration timing-function delay iteration-count direction fill-mode;
+        }
+      }
+      .txt {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // mainVisual end
+  #quickMenu {
+    .list {
+      display: flex;
+      justify-content: center;
+      li {
+        width: 400px;
+        position: relative;
+        .txtBox {
+          position: absolute;
+          bottom: 40px;
+          left: 40px;
+          color: #fff;
+          h3 {
+            font-size: 3.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes iconAni {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }
