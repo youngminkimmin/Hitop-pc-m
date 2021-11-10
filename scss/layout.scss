@@ -179,8 +179,6 @@ img {
     padding: 50px 0;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
-    position: relative;
     .address {
       margin-left: 50px;
       line-height: 1.5;
@@ -189,8 +187,7 @@ img {
       }
     }
     .tel {
-      position: absolute;
-      right: 0;
+      margin-left: auto;
       strong {
         display: block;
         font-size: 3.6rem;
