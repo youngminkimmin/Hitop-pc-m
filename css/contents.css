@@ -1,33 +1,41 @@
-#subContents #subVisual { height: 350px; background-repeat: no-repeat; background-size: cover; background-position: 50%; position: relative; z-index: 3; }
+#subContentsWrap #subVisual { height: 350px; background-repeat: no-repeat; background-size: cover; background-position: 50%; position: relative; z-index: 3; }
 
-#subContents #subVisual .subTitle { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; text-align: center; padding-top: 50px; }
+#subContentsWrap #subVisual .subTitle { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; text-align: center; padding-top: 50px; }
 
-#subContents #subVisual .subTitle h2 { font-size: 6.4rem; font-weight: 600; margin-bottom: 20px; }
+#subContentsWrap #subVisual .subTitle h2 { font-size: 6.4rem; font-weight: 600; margin-bottom: 20px; }
 
-#subContents #subVisual .subTitle p { font-size: 18px; }
+#subContentsWrap #subVisual .subTitle p { font-size: 18px; }
 
-#subContents #subVisual #lnb { position: absolute; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.5); height: 50px; width: 100%; }
+#subContentsWrap #subVisual #lnb { position: absolute; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.5); height: 50px; width: 100%; }
 
-#subContents #subVisual #lnb .contents { width: 1200px; margin: auto; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#subContentsWrap #subVisual #lnb .contents { width: 1200px; margin: auto; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-#subContents #subVisual #lnb .contents .home a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 50px; height: 50px; color: #fff; }
+#subContentsWrap #subVisual #lnb .contents .home a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 50px; height: 50px; color: #fff; }
 
-#subContents #subVisual #lnb .contents .item:hover ul { display: block; }
+#subContentsWrap #subVisual #lnb .contents .item:hover ul { display: block; }
 
-#subContents #subVisual #lnb .contents .item button { width: 250px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 15px; color: #fff; }
+#subContentsWrap #subVisual #lnb .contents .item button { width: 250px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 15px; color: #fff; }
 
-#subContents #subVisual #lnb .contents .item ul { border: 1px solid #111111; background-color: #fff; display: none; }
+#subContentsWrap #subVisual #lnb .contents .item ul { border: 1px solid #111111; background-color: #fff; display: none; }
 
-#subContents #subVisual #lnb .contents .item ul li { border-top: 1px solid #111111; }
+#subContentsWrap #subVisual #lnb .contents .item ul li { border-top: 1px solid #111111; }
 
-#subContents #subVisual #lnb .contents .item ul li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 50px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-left: 20px; }
+#subContentsWrap #subVisual #lnb .contents .item ul li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 50px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-left: 20px; }
 
-#subContents .subVisual01 { background-image: url("../images/contents/subVisual01.jpg"); }
+#subContentsWrap .subVisual01 { background-image: url("../images/contents/subVisual01.jpg"); }
 
-#subContents .subVisual02 { background-image: url("../images/contents/subVisual02.jpg"); }
+#subContentsWrap .subVisual02 { background-image: url("../images/contents/subVisual02.jpg"); }
 
-#subContents .subVisual03 { background-image: url("../images/contents/subVisual03.jpg"); }
+#subContentsWrap .subVisual03 { background-image: url("../images/contents/subVisual03.jpg"); }
 
-#subContents .subVisual04 { background-image: url("../images/contents/subVisual04.jpg"); }
+#subContentsWrap .subVisual04 { background-image: url("../images/contents/subVisual04.jpg"); }
 
-#subContents .subVisual05 { background-image: url("../images/contents/subVisual05.jpg"); }
+#subContentsWrap .subVisual05 { background-image: url("../images/contents/subVisual05.jpg"); }
+
+#subContentsWrap #subContents { padding: 100px 0; }
+
+#subContentsWrap #subContents .subTitle { font-size: 3.6rem; text-align: center; font-weight: 500; }
+
+#subContentsWrap #subContents .subTitle:after { content: ""; display: block; position: relative; width: 40px; height: 4px; background-color: #bf0c14; margin: 50px auto; }
+
+#subContentsWrap #subContents .contents { width: 1200px; margin: auto; }

@@ -1,0 +1,23 @@
+//회원가입...
+//공지사항...
+//form관련 css
+@import "vars";
+@import "mixins";
+.board {
+  width: 100%;
+  border-top: 1px solid $main-color;
+  tr {
+    border-bottom: 1px solid $border-color;
+    &:hover {
+      background-color: $light-gray-color;
+    }
+    th,
+    td {
+      padding: 15px 0;
+      text-align: center;
+    }
+    .subject {
+      text-align: left;
+    }
+  }
+}

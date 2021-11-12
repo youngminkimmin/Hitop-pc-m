@@ -1,7 +1,7 @@
 @import "vars";
 @import "mixins";
 
-#subContents {
+#subContentsWrap {
   #subVisual {
     height: 350px;
     background-repeat: no-repeat;
@@ -89,5 +89,24 @@
   }
   .subVisual05 {
     background-image: url("../images/contents/subVisual05.jpg");
+  }
+
+  #subContents {
+    padding: 100px 0;
+    .subTitle {
+      font-size: $h2;
+      text-align: center;
+      font-weight: 500; //100,300,400,500,700,900
+      &:after {
+        @include pseudo(block, relative);
+        @include box(40px, 4px);
+        background-color: $main-color;
+        margin: 50px auto;
+      }
+    }
+    .contents {
+      width: 1200px;
+      margin: auto;
+    }
   }
 }
