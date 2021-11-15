@@ -130,7 +130,7 @@
           background-color: $main-color;
           border-color: $main-color;
           color: $white-color;
-          @include longShadow(darken($main-color, 10), right, 30);
+          @include longShadow(darken($main-color, 10), right, 40);
         }
       }
     }
@@ -144,10 +144,36 @@
     //align-items: flex-end;
 
     flex-direction: column;
-    padding: 100px 0;
+    margin: 100px 0;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: $border-color;
+      left: 50%;
+      margin-left: -1px;
+    }
     > li {
       width: 50%;
       box-sizing: border-box;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 5px solid $main-color;
+        background-color: $white-color;
+        position: absolute;
+        top: 10px;
+
+        border-radius: 100px;
+        box-sizing: border-box;
+      }
       .year {
         font-size: $x-large-size;
         font-weight: 700;
@@ -164,6 +190,10 @@
       }
       &:nth-child(2n) {
         padding-right: 50px;
+        &:before {
+          right: 0;
+          transform: translateX(50%);
+        }
         .year {
           display: flex;
           justify-content: flex-end;
@@ -173,14 +203,61 @@
             flex-direction: row-reverse;
             display: flex;
             //justify-content: flex-end;
+            strong {
+              margin-left: 20px;
+            }
           }
         }
       }
       &:nth-child(2n + 1) {
         //align-content: flex-end;
+        &:before {
+          left: 0;
+          transform: translateX(-50%);
+        }
         padding-left: 50px;
         margin-left: auto;
+        ul {
+          li {
+            strong {
+              margin-right: 20px;
+            }
+          }
+        }
       }
     }
+  }
+}
+// history end
+
+#map {
+  height: 600px;
+  margin-top: 100px;
+}
+.customOverlay {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  a {
+    display: block;
+    padding: 10px 20px;
+    background-color: $main-color;
+    overflow: hidden;
+    @include longShadow(darken($main-color, 10), right, 30);
+    border-radius: 5px;
+    color: $white-color;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: darken($main-color, 10);
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
   }
 }
