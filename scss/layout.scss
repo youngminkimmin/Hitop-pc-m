@@ -28,7 +28,7 @@ img {
   position: fixed;
   width: 100%;
   height: 90px;
-  overflow: hidden;
+  //overflow: hidden;
   transition: all 0.25s ease;
   z-index: 99;
   &.open {
@@ -45,6 +45,7 @@ img {
     right: 0px;
     top: 89px;
     //top: 89px;
+    pointer-events: none;
     background-color: rgba(255, 255, 255, 0.5); // r(0~255),g(0~255),b(0~255),a(0~1)
   }
   .container {
@@ -64,6 +65,7 @@ img {
       .list {
         display: flex;
         > li {
+          position: relative;
           > a {
             font-size: $medium-size;
             text-transform: capitalize;
@@ -74,11 +76,28 @@ img {
             height: 90px;
             padding: 0 50px;
           }
+          &:hover {
+            > a {
+              background-color: $main-color;
+            }
+            .depth02 {
+              display: block;
+            }
+          }
           .depth02 {
+            background-color: $main-color;
+            padding: 20px 10px;
+            border-radius: 0 0 15px 15px;
+            display: none;
             li {
               a {
                 display: block;
                 padding: 10px 0;
+                &:hover {
+                  background-color: darken($main-color, 10);
+                  border-radius: 5px;
+                  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+                }
               }
             }
           }
