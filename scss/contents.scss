@@ -110,3 +110,77 @@
     }
   }
 }
+
+.tabBox {
+  .tabMenu {
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        width: 200px;
+        height: 60px;
+        border: 1px solid $border-color;
+        @include flexCenter();
+        overflow: hidden;
+        border-left: none;
+        &:nth-child(1) {
+          border-left: 1px solid $border-color;
+        }
+        &.on {
+          background-color: $main-color;
+          border-color: $main-color;
+          color: $white-color;
+          @include longShadow(darken($main-color, 10), right, 30);
+        }
+      }
+    }
+  }
+}
+
+.history {
+  .historyList {
+    display: flex;
+    //justify-content: center;
+    //align-items: flex-end;
+
+    flex-direction: column;
+    padding: 100px 0;
+    > li {
+      width: 50%;
+      box-sizing: border-box;
+      .year {
+        font-size: $x-large-size;
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+      ul {
+        li {
+          display: flex;
+          margin: 15px 0;
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+      &:nth-child(2n) {
+        padding-right: 50px;
+        .year {
+          display: flex;
+          justify-content: flex-end;
+        }
+        ul {
+          li {
+            flex-direction: row-reverse;
+            display: flex;
+            //justify-content: flex-end;
+          }
+        }
+      }
+      &:nth-child(2n + 1) {
+        //align-content: flex-end;
+        padding-left: 50px;
+        margin-left: auto;
+      }
+    }
+  }
+}
