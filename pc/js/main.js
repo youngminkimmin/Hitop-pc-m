@@ -1,3 +1,5 @@
+Splitting();
+
 const mainVisualSlider = new Swiper("#mainVisual", {
   autoplay: true,
   speed: 1000,
@@ -24,7 +26,23 @@ for (let i = 0; i < gnbItem.length; i++) {
   });
 }
 
-/**
+gsap.from("#mainVisual .slogan .main .char", {
+  opacity: 0,
+  y: -150,
+  ease: "bounce",
+  duration: 2,
+  stagger: 0.1,
+});
+gsap.from("#mainVisual .slogan .sub .char", {
+  opacity: 0,
+  y: -150,
+  ease: "bounce",
+  duration: 2,
+  delay: 2,
+  stagger: 0.1,
+});
+
+/*
 const iq = 182;
 let height = 180;
 height = height + 5; // 대입연산자...
