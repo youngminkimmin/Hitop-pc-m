@@ -10,7 +10,11 @@ img { vertical-align: top; }
 
 .hidden { display: none; }
 
-#header { position: fixed; width: 100%; height: 90px; overflow: hidden; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; z-index: 99; }
+#header { position: fixed; width: 100%; height: 90px; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; z-index: 99; }
+
+#header.scroll { background-color: rgba(0, 0, 0, 0.8); }
+
+#header.scroll:after { opacity: 0; }
 
 #header.open { height: 400px; background-color: rgba(0, 0, 0, 0.8); }
 
@@ -26,13 +30,17 @@ img { vertical-align: top; }
 
 #header .container #gnb .list > li { position: relative; }
 
-#header .container #gnb .list > li > a { font-size: 18px; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; }
+#header .container #gnb .list > li > a { font-size: 18px; text-transform: capitalize; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 90px; padding: 0 50px; position: relative; }
+
+#header .container #gnb .list > li > a:after { content: ""; display: block; position: absolute; height: 2px; bottom: 0; left: 20px; right: 20px; background-color: #fff; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transition: 0.25s ease; transition: 0.25s ease; }
 
 #header .container #gnb .list > li:hover > a { background-color: #bf0c14; }
 
+#header .container #gnb .list > li:hover > a:after { -webkit-transform: scale(1); transform: scale(1); }
+
 #header .container #gnb .list > li:hover .depth02 { background-color: #bf0c14; }
 
-#header .container #gnb .list > li .depth02 { padding: 20px 10px; display: block; height: 400px; }
+#header .container #gnb .list > li .depth02 { background-color: #bf0c14; padding: 20px 10px; border-radius: 0 0 15px 15px; display: none; }
 
 #header .container #gnb .list > li .depth02 li a { display: block; padding: 10px 0; }
 

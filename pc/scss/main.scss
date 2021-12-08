@@ -273,6 +273,33 @@ article {
   }
 }
 
+.popup {
+  position: fixed;
+  z-index: 100000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  .contents {
+    padding: 50px;
+  }
+  .btns {
+    display: flex;
+    border-top: 1px solid #ccc;
+    button {
+      width: 50%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.oneday {
+        background-color: #111;
+        color: #fff;
+      }
+    }
+  }
+}
+
 @keyframes iconAni {
   0% {
     transform: translateY(0);

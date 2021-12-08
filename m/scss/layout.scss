@@ -31,6 +31,12 @@ img {
   //overflow: hidden;
   transition: all 0.25s ease;
   z-index: 99;
+  &.scroll {
+    background-color: rgba(0, 0, 0, 0.5);
+    &:after {
+      opacity: 0;
+    }
+  }
   &:after {
     content: "";
     display: block;

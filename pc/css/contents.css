@@ -12,13 +12,11 @@
 
 #subContentsWrap #subVisual #lnb .contents .home a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 50px; height: 50px; color: #fff; }
 
-#subContentsWrap #subVisual #lnb .contents .item:hover ul { display: block; }
-
 #subContentsWrap #subVisual #lnb .contents .item button { width: 250px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 15px; color: #fff; }
 
-#subContentsWrap #subVisual #lnb .contents .item ul { border: 1px solid #111111; background-color: #fff; display: none; }
+#subContentsWrap #subVisual #lnb .contents .item ul { border: 1px solid #111111; background-color: #fff; display: none; border-top: none; border-bottom: none; }
 
-#subContentsWrap #subVisual #lnb .contents .item ul li { border-top: 1px solid #111111; }
+#subContentsWrap #subVisual #lnb .contents .item ul li { border-bottom: 1px solid #111111; }
 
 #subContentsWrap #subVisual #lnb .contents .item ul li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 50px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding-left: 20px; }
 
@@ -42,11 +40,15 @@
 
 .tabBox .tabMenu ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.tabBox .tabMenu ul li { width: 200px; height: 60px; border: 1px solid #d9d9d9; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; overflow: hidden; border-left: none; }
+.tabBox .tabMenu ul li { width: 200px; height: 60px; border: 1px solid #d9d9d9; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; overflow: hidden; border-left: none; cursor: pointer; }
 
 .tabBox .tabMenu ul li:nth-child(1) { border-left: 1px solid #d9d9d9; }
 
 .tabBox .tabMenu ul li.on { background-color: #bf0c14; border-color: #bf0c14; color: #fff; text-shadow: 1px 1px 0px #8f090f,2px 2px 0px #8f090f,3px 3px 0px #8f090f,4px 4px 0px #8f090f,5px 5px 0px #8f090f,6px 6px 0px #8f090f,7px 7px 0px #8f090f,8px 8px 0px #8f090f,9px 9px 0px #8f090f,10px 10px 0px #8f090f,11px 11px 0px #8f090f,12px 12px 0px #8f090f,13px 13px 0px #8f090f,14px 14px 0px #8f090f,15px 15px 0px #8f090f,16px 16px 0px #8f090f,17px 17px 0px #8f090f,18px 18px 0px #8f090f,19px 19px 0px #8f090f,20px 20px 0px #8f090f,21px 21px 0px #8f090f,22px 22px 0px #8f090f,23px 23px 0px #8f090f,24px 24px 0px #8f090f,25px 25px 0px #8f090f,26px 26px 0px #8f090f,27px 27px 0px #8f090f,28px 28px 0px #8f090f,29px 29px 0px #8f090f,30px 30px 0px #8f090f,31px 31px 0px #8f090f,32px 32px 0px #8f090f,33px 33px 0px #8f090f,34px 34px 0px #8f090f,35px 35px 0px #8f090f,36px 36px 0px #8f090f,37px 37px 0px #8f090f,38px 38px 0px #8f090f,39px 39px 0px #8f090f,40px 40px 0px #8f090f;; }
+
+.tabBox .tabContents > ul > li { display: none; }
+
+.tabBox .tabContents > ul > li:first-child { display: block; }
 
 .history .historyList { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; margin: 100px 0; position: relative; }
 

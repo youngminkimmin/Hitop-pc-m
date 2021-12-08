@@ -45,7 +45,7 @@
         .item {
           &:hover {
             ul {
-              display: block;
+              //display: block;
             }
           }
           button {
@@ -61,8 +61,10 @@
             border: 1px solid $text-color;
             background-color: #fff;
             display: none;
+            border-top: none;
+            border-bottom: none;
             li {
-              border-top: 1px solid $text-color;
+              border-bottom: 1px solid $text-color;
               a {
                 display: flex;
                 height: 50px;
@@ -90,7 +92,6 @@
   .subVisual05 {
     background-image: url("../images/contents/subVisual05.jpg");
   }
-
   #subContents {
     padding: 100px 0;
     .subTitle {
@@ -123,6 +124,7 @@
         @include flexCenter();
         overflow: hidden;
         border-left: none;
+        cursor: pointer;
         &:nth-child(1) {
           border-left: 1px solid $border-color;
         }
@@ -131,6 +133,16 @@
           border-color: $main-color;
           color: $white-color;
           @include longShadow(darken($main-color, 10), right, 40);
+        }
+      }
+    }
+  }
+  .tabContents {
+    > ul {
+      > li {
+        display: none;
+        &:first-child {
+          display: block;
         }
       }
     }
