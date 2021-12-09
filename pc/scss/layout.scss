@@ -249,3 +249,18 @@ img {
     }
   }
 }
+
+.btnTop {
+  background-color: $main-color;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 50px;
+  bottom: -100px;
+  color: #fff;
+  z-index: 10;
+  transition: 0.5s ease;
+  &.on {
+    bottom: 50px;
+  }
+}

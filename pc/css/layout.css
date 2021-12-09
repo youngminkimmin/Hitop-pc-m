@@ -89,3 +89,7 @@ img { vertical-align: top; }
 #footer .addressBox .tel { margin-left: auto; }
 
 #footer .addressBox .tel strong { display: block; font-size: 3.6rem; font-weight: 600; margin-top: 20px; }
+
+.btnTop { background-color: #bf0c14; width: 80px; height: 80px; position: fixed; right: 50px; bottom: -100px; color: #fff; z-index: 10; -webkit-transition: 0.5s ease; transition: 0.5s ease; }
+
+.btnTop.on { bottom: 50px; }

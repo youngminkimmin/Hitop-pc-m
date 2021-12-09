@@ -280,18 +280,20 @@ article {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  display: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   .contents {
-    padding: 50px;
+    padding: 0px;
   }
   .btns {
     display: flex;
-    border-top: 1px solid #ccc;
     button {
       width: 50%;
       padding: 20px 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: #ccc;
       &.oneday {
         background-color: #111;
         color: #fff;

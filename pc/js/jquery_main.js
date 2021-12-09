@@ -119,8 +119,22 @@ InbItem.on("mouseleave", function () {
 
 const popup = $(".popup");
 const btnOneday = popup.find(".oneday");
-const btnclose = popup.find(".close");
+const btnClose = popup.find(".close");
 btnOneday.on("click", function () {
+  //popup.hide();
+  Cookies.set("oneday", "one", { expires: 1 });
+  gsap.to(".popup", {
+    duration: 1,
+    top: "-100%",
+    ease: "back.in",
+    onComplete: function () {
+      popup.remove();
+    },
+  });
+});
+//cookie를 이용
+btnClose.on("click", function () {
+  //popup.hide();
   gsap.to(".popup", {
     duration: 1,
     top: "-100%",
@@ -131,13 +145,30 @@ btnOneday.on("click", function () {
   });
 });
 
-btnclose.on("click", function () {
-  gsap.to(".popup", {
-    duration: 1,
-    top: "-100%",
-    ease: "back.in",
-    onComplete: function () {
-      popup.remove();
-    },
-  });
+//console.log(Cookies.get("oneday"));
+if (Cookies.get("oneday") === "one") {
+  popup.hide();
+} else {
+  popup.show();
+}
+
+// 행위.....
+
+const btnTop = $(".btnTop");
+$(window).on("scroll", function () {
+  const st = $(window).scrollTop();
+  if (st > 0) {
+    if (!header.hasClass("scroll")) {
+      header.addClass("scroll");
+    }
+  } else {
+    if (header.hasClass("scroll")) {
+      header.removeClass("scroll");
+    }
+  }
+});
+
+btnTop.on("click", function () {
+  //$(window).scrollTop(0);
+  gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
 });
